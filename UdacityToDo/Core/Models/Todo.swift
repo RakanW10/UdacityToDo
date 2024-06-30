@@ -19,6 +19,6 @@ struct Todo: Identifiable, Codable {
 
 extension Todo: CustomStringConvertible {
     var description: String {
-        "id: \(id). title: \(title). completed: \(isCompleted ? "✅" : "❌")"
+        "\(isCompleted ? "✅" : "❌") \(title)"
     }
 }

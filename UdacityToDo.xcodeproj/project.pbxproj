@@ -14,6 +14,7 @@
 		492F6EEE2C30A5C700F25D7F /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */; };
 		492F6EF02C311CD100F25D7F /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EEF2C311CD100F25D7F /* Command.swift */; };
 		492F6EF92C311DCD00F25D7F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EF82C311DCD00F25D7F /* App.swift */; };
+		492F6EFB2C31221A00F25D7F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EFA2C31221A00F25D7F /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		492F6EEF2C311CD100F25D7F /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		492F6EF82C311DCD00F25D7F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		492F6EFA2C31221A00F25D7F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */,
+				492F6EFA2C31221A00F25D7F /* String+Ext.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				492F6EEC2C30A3CE00F25D7F /* TodosError.swift in Sources */,
 				492F6EE82C309F4000F25D7F /* Todo.swift in Sources */,
 				492F6EF92C311DCD00F25D7F /* App.swift in Sources */,
+				492F6EFB2C31221A00F25D7F /* String+Ext.swift in Sources */,
 				492F6EF02C311CD100F25D7F /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

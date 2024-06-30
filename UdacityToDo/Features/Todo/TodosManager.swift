@@ -11,7 +11,7 @@ class TodosManager {
     static let shared = TodosManager()
     private init() {}
     
-    var todos = [Todo]()
+    private var todos = [Todo]()
     
     func add(_ title: String) {
         todos.append(.init(title: title, isCompleted: false))
@@ -23,6 +23,7 @@ class TodosManager {
     func toggleCompletion(at index: Int) -> Result<Todo, TodosError> {
         if var todo = todos[safe: index] {
             todo.toggleCompletion()
+            todos[index] = todo
             return .success(todo)
         }
         else {
