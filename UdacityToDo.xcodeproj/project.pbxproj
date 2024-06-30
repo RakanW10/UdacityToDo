@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		492F6EE12C309F0F00F25D7F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EE02C309F0F00F25D7F /* main.swift */; };
+		492F6EE82C309F4000F25D7F /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EE72C309F4000F25D7F /* Todo.swift */; };
+		492F6EEA2C309F8E00F25D7F /* TodosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EE92C309F8E00F25D7F /* TodosManager.swift */; };
+		492F6EEC2C30A3CE00F25D7F /* TodosError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EEB2C30A3CE00F25D7F /* TodosError.swift */; };
+		492F6EEE2C30A5C700F25D7F /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */; };
+		492F6EF02C311CD100F25D7F /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EEF2C311CD100F25D7F /* Command.swift */; };
+		492F6EF92C311DCD00F25D7F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EF82C311DCD00F25D7F /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		492F6EDD2C309F0F00F25D7F /* UdacityToDo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UdacityToDo; sourceTree = BUILT_PRODUCTS_DIR; };
 		492F6EE02C309F0F00F25D7F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		492F6EE72C309F4000F25D7F /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		492F6EE92C309F8E00F25D7F /* TodosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosManager.swift; sourceTree = "<group>"; };
+		492F6EEB2C30A3CE00F25D7F /* TodosError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosError.swift; sourceTree = "<group>"; };
+		492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
+		492F6EEF2C311CD100F25D7F /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		492F6EF82C311DCD00F25D7F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,71 @@
 		492F6EDF2C309F0F00F25D7F /* UdacityToDo */ = {
 			isa = PBXGroup;
 			children = (
-				492F6EE02C309F0F00F25D7F /* main.swift */,
+				492F6EF12C311CE400F25D7F /* Core */,
+				492F6EF62C311D3000F25D7F /* Features */,
 			);
 			path = UdacityToDo;
+			sourceTree = "<group>";
+		};
+		492F6EF12C311CE400F25D7F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EF52C311D1F00F25D7F /* Errors */,
+				492F6EF42C311D0700F25D7F /* Enums */,
+				492F6EF32C311CFA00F25D7F /* Extenstions */,
+				492F6EF22C311CF500F25D7F /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		492F6EF22C311CF500F25D7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EE72C309F4000F25D7F /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		492F6EF32C311CFA00F25D7F /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		492F6EF42C311D0700F25D7F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EEF2C311CD100F25D7F /* Command.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		492F6EF52C311D1F00F25D7F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EEB2C30A3CE00F25D7F /* TodosError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		492F6EF62C311D3000F25D7F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EE02C309F0F00F25D7F /* main.swift */,
+				492F6EF72C311D3D00F25D7F /* Todo */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		492F6EF72C311D3D00F25D7F /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				492F6EE92C309F8E00F25D7F /* TodosManager.swift */,
+				492F6EF82C311DCD00F25D7F /* App.swift */,
+			);
+			path = Todo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				492F6EE12C309F0F00F25D7F /* main.swift in Sources */,
+				492F6EEA2C309F8E00F25D7F /* TodosManager.swift in Sources */,
+				492F6EEE2C30A5C700F25D7F /* Collection+Ext.swift in Sources */,
+				492F6EEC2C30A3CE00F25D7F /* TodosError.swift in Sources */,
+				492F6EE82C309F4000F25D7F /* Todo.swift in Sources */,
+				492F6EF92C311DCD00F25D7F /* App.swift in Sources */,
+				492F6EF02C311CD100F25D7F /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
