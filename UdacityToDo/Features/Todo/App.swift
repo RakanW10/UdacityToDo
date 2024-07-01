@@ -7,9 +7,11 @@
 
 import Foundation
 
-class App {
+final class App {
+    private enum Command: String{case add, list, toggle, delete, exit}
     private var currentCommand : Command?
-    func startApp(){
+    
+    func run(){
     mainLoop: repeat {
         print("What would you like to do? (add, list, toggle, delete, exit): ", terminator: "")
         self.currentCommand = Command(rawValue: readUserInput() ?? "exit")
@@ -52,7 +54,7 @@ class App {
     private func list(){
         let todos = TodosManager.shared.listTodos()
         if todos.isEmpty {
-            print("You don't have any todos yat.")
+            print("\n😔 You don't have any todos yat.", terminator: "\n\n")
         } else {
             print("\n📝 Your Todos:")
             

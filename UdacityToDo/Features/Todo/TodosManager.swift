@@ -7,14 +7,17 @@
 
 import Foundation
 
-class TodosManager {
+final class TodosManager {
     static let shared = TodosManager()
-    private init() {}
+    private init() {
+        todos = JSONFileManagerCache.shared.load() ?? []
+    }
     
     private var todos = [Todo]()
     
     func add(_ title: String) {
         todos.append(.init(title: title, isCompleted: false))
+        updateCache()
     }
     
     // TodosManager is not responsible to print todos in the terminal so it will give all todos back to the caller
@@ -24,6 +27,7 @@ class TodosManager {
         if var todo = todos[safe: index] {
             todo.toggleCompletion()
             todos[index] = todo
+            updateCache()
             return .success(todo)
         }
         else {
@@ -34,16 +38,15 @@ class TodosManager {
     func delete(at index: Int) -> Result<Todo, TodosError> {
         if let todo = todos[safe: index] {
             todos.removeAll{$0.id == todo.id }
+            updateCache()
             return .success(todo)
         }
         else {
             return .failure(.indexNotFound)
         }
     }
-}
- 
-//TODO: Cache
-extension TodosManager {
-//    func save(todos: [Todo]) -> Bool{}
-//    func load() -> [Todo]?
+        
+    private func updateCache(){
+        JSONFileManagerCache.shared.save(todos: todos)
+    }
 }

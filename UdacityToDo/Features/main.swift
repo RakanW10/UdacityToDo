@@ -9,4 +9,4 @@ import Foundation
 
 let app = App()
 
-app.startApp()
+app.run()

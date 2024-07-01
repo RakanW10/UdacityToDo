@@ -12,9 +12,11 @@
 		492F6EEA2C309F8E00F25D7F /* TodosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EE92C309F8E00F25D7F /* TodosManager.swift */; };
 		492F6EEC2C30A3CE00F25D7F /* TodosError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EEB2C30A3CE00F25D7F /* TodosError.swift */; };
 		492F6EEE2C30A5C700F25D7F /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */; };
-		492F6EF02C311CD100F25D7F /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EEF2C311CD100F25D7F /* Command.swift */; };
 		492F6EF92C311DCD00F25D7F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EF82C311DCD00F25D7F /* App.swift */; };
 		492F6EFB2C31221A00F25D7F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6EFA2C31221A00F25D7F /* String+Ext.swift */; };
+		49B99D6E2C31F69200ABCEEE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D6D2C31F69200ABCEEE /* Cache.swift */; };
+		49B99D702C31F70D00ABCEEE /* InMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D6F2C31F70D00ABCEEE /* InMemoryCache.swift */; };
+		49B99D732C31F7E700ABCEEE /* JSONFileManagerCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D722C31F7E700ABCEEE /* JSONFileManagerCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,9 +38,11 @@
 		492F6EE92C309F8E00F25D7F /* TodosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosManager.swift; sourceTree = "<group>"; };
 		492F6EEB2C30A3CE00F25D7F /* TodosError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosError.swift; sourceTree = "<group>"; };
 		492F6EED2C30A5C700F25D7F /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
-		492F6EEF2C311CD100F25D7F /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		492F6EF82C311DCD00F25D7F /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		492F6EFA2C31221A00F25D7F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		49B99D6D2C31F69200ABCEEE /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		49B99D6F2C31F70D00ABCEEE /* InMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCache.swift; sourceTree = "<group>"; };
+		49B99D722C31F7E700ABCEEE /* JSONFileManagerCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileManagerCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +84,8 @@
 		492F6EF12C311CE400F25D7F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				49B99D6C2C31F67900ABCEEE /* Storage */,
 				492F6EF52C311D1F00F25D7F /* Errors */,
-				492F6EF42C311D0700F25D7F /* Enums */,
 				492F6EF32C311CFA00F25D7F /* Extenstions */,
 				492F6EF22C311CF500F25D7F /* Models */,
 			);
@@ -103,14 +107,6 @@
 				492F6EFA2C31221A00F25D7F /* String+Ext.swift */,
 			);
 			path = Extenstions;
-			sourceTree = "<group>";
-		};
-		492F6EF42C311D0700F25D7F /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				492F6EEF2C311CD100F25D7F /* Command.swift */,
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		492F6EF52C311D1F00F25D7F /* Errors */ = {
@@ -137,6 +133,16 @@
 				492F6EF82C311DCD00F25D7F /* App.swift */,
 			);
 			path = Todo;
+			sourceTree = "<group>";
+		};
+		49B99D6C2C31F67900ABCEEE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				49B99D6D2C31F69200ABCEEE /* Cache.swift */,
+				49B99D6F2C31F70D00ABCEEE /* InMemoryCache.swift */,
+				49B99D722C31F7E700ABCEEE /* JSONFileManagerCache.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +205,14 @@
 			files = (
 				492F6EE12C309F0F00F25D7F /* main.swift in Sources */,
 				492F6EEA2C309F8E00F25D7F /* TodosManager.swift in Sources */,
+				49B99D732C31F7E700ABCEEE /* JSONFileManagerCache.swift in Sources */,
+				49B99D6E2C31F69200ABCEEE /* Cache.swift in Sources */,
 				492F6EEE2C30A5C700F25D7F /* Collection+Ext.swift in Sources */,
 				492F6EEC2C30A3CE00F25D7F /* TodosError.swift in Sources */,
 				492F6EE82C309F4000F25D7F /* Todo.swift in Sources */,
 				492F6EF92C311DCD00F25D7F /* App.swift in Sources */,
 				492F6EFB2C31221A00F25D7F /* String+Ext.swift in Sources */,
-				492F6EF02C311CD100F25D7F /* Command.swift in Sources */,
+				49B99D702C31F70D00ABCEEE /* InMemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
